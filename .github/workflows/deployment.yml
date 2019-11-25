@@ -1,0 +1,21 @@
+name: Deployment
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: [ubuntu-latest]
+    steps:
+    - uses: actions/checkout@v1
+      with:
+        fetch-depth: 1
+    - name: Deploy Live
+      uses: burnett01/rsync-deployments@master
+      with:
+        switches: -avzr --delete --filter="merge .github/filters/rsync.cd.conf"
+        path: ""
+        upload_path: ${{secrets.DEPLOY_USER}}@${{secrets.DEPLOY_HOST}}:/home/deployment/limelight-info
+      env:
+        DEPLOY_KEY: ${{secrets.DEPLOY_KEY}}
