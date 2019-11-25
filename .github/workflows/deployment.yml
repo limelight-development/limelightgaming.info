@@ -17,5 +17,6 @@ jobs:
         switches: -avzr --delete --dry-run
         path: ""
         upload_path: ${{secrets.DEPLOY_USER}}@${{secrets.DEPLOY_HOST}}:/home/deployment/limelight-info
+        rsh: ""
       env:
         DEPLOY_KEY: ${{secrets.DEPLOY_KEY}}
