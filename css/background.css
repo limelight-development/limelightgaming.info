@@ -20,10 +20,10 @@
 
 .bg-lightalt {
 	background: #ECEFF1;
-	background: linear-gradient(30deg,#ECEFF1 50%,#78909C 50%)
+	background: linear-gradient(30deg,#ECEFF1 50%,#CFD8DC 50%)
 }
 
 .bg-lightaltrev {
-	background: #ECEFF1;
-	background: linear-gradient(-30deg,#78909C 50%,#ECEFF1 50%)
+	background: #CFD8DC;
+	background: linear-gradient(-30deg,#CFD8DC 50%,#ECEFF1 50%)
 }
