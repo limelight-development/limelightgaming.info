@@ -12,11 +12,10 @@ jobs:
       with:
         fetch-depth: 1
     - name: Deploy Live
-      uses: burnett01/rsync-deployments@1.0
+      uses: burnett01/rsync-deployments@2.0
       with:
         switches: -avzrO --no-perms --no-o --no-g --delete --filter="merge .github/filter"
-        path: ""
-        upload_path: ${{secrets.DEPLOY_USER}}@${{secrets.DEPLOY_HOST}}:/home/deployment/limelight-info
-        rsh: ""
-      env:
-        DEPLOY_KEY: ${{secrets.DEPLOY_KEY}}
+        remote_path: /home/deployment/limelight-info
+        remote_host: ${{secrets.DEPLOY_HOST}}	
+        remote_user: ${{secrets.DEPLOY_USER}}
+        remote_key: ${{secrets.DEPLOY_KEY}}
