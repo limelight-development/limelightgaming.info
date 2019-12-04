@@ -12,7 +12,7 @@ jobs:
       with:
         fetch-depth: 1
     - name: Deploy Live
-      uses: burnett01/rsync-deployments@master
+      uses: burnett01/rsync-deployments@1.0
       with:
         switches: -avzrO --no-perms --no-o --no-g --delete --filter="merge .github/filter"
         path: ""
