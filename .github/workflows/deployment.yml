@@ -12,7 +12,7 @@ jobs:
       with:
         fetch-depth: 1
     - name: Deploy Live
-      uses: burnett01/rsync-deployments@3.0
+      uses: joshpiper/rsync-deployments@feat/rsync-image
       with:
         switches: -avzrO --no-perms --no-o --no-g --delete --filter="merge .github/filter"
         remote_path: /home/deployment/limelight-info
