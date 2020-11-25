@@ -3,6 +3,7 @@ The basic informational site for LL's open source / business side.
 
 ## Deployment
 
-Deployment for master branch works automatically.
+Deployment is handed through default GitHub Pages.
+Master branch is deployed to the live site, no other branches are.
 
-Deployment for non-master branches doesn't deploy automatically.
+Local development & testing should take place using the provided gems.
