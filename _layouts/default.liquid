@@ -40,6 +40,9 @@ scripts:
 		{% for link in page.scripts -%}
 			{%- include components/script.html.liquid link=link %}
 		{% endfor %}
+
+        {% seo %}
+        <meta name="theme-color" content="#42a5f5">
 	</head>
     <body>
         {{ page.content }}
