@@ -1,12 +1,12 @@
-#collections:
-#  - jobs
-#
-#defaults:
-#  -
-#    scope:
-#      path: "_jobs"
-#    values:
-#      layout: "card"
+collections:
+  - homework
+
+defaults:
+  -
+    scope:
+      path: "_homework"
+    values:
+      layout: "homework"
 
 title: Limelight Gaming
 
