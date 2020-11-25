@@ -46,6 +46,15 @@ scripts:
 	</head>
     <body>
         {% include nav.html.liquid %}
+
         {{ page.content }}
+
+        {% include footer.html.liquid %}
+        {% if page.media %}{% include mediabox.html %}{% endif %}
+
+        <div id="back-to-top" style="display: none;"></div>
     </body>
+
+    {% if page.media %}<script src="{{ '/assets/js/lightbox.js' | relative_url }}"></script>{% endif %}
+    {% for script in page.endscripts %}<script src="{{ script | relative_url }}"></script>{% endfor %}
 </html>
