@@ -1,0 +1,25 @@
+---
+links:
+    - href: "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity: "sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin: "anonymous"
+---
+<!DOCTYPE html>
+<html lang="{{ page.language | default: site.language | default: 'en' }}">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<link type="image/ico" href="{{ 'favicon.ico' | relative_url }}" rel="icon">
+		{%- for link in site.links -%}
+			{%- include components/link.html.liquid link=link -%}
+		{%- endfor -%}
+		{%- for link in layout.links -%}
+			{% include components/link.html.liquid link=link %}
+		{%- endfor -%}
+		{%- for link in page.links -%}
+			{%- include components/link.html.liquid link=link -%}
+		{%- endfor -%}
+	</head>
+</html>
