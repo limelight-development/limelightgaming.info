@@ -1,2 +1,1 @@
-{% assign include = include.link %}
-		<link type="{{ include.link.type | default: 'text/css' }}" href="{{ include.href }}" rel="{{ include.rel | default: 'stylesheet' }}"{% if include.integrity != null %} integrity="{{ include.integrity }}"{% endif %}{% if include.crossorigin != null %} crossorigin="{{ include.crossorigin }}"{% endif %}>
+<link type="{{ include.link.type | default: 'text/css' }}" href="{{ include.link.href }}" rel="{{ include.link.rel | default: 'stylesheet' }}"{% if include.link.integrity != null %} integrity="{{ include.link.integrity }}"{% endif %}{% if include.link.crossorigin != null %} crossorigin="{{ include.link.crossorigin }}"{% endif %}>
