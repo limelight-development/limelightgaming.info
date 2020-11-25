@@ -1,3 +1,44 @@
-<div>
-    {{ page.content }}
+{% assign start = '2020-1-1' | date: '%s' %}
+{% assign now = page.date | date: '%s' %}
+{% assign days = now | minus: start | divided_by: 86400 %}
+{% assign discriminator = days | modulo: 3 %}
+{% assign leftright = days | modulo: 2 %}
+{% capture background %}
+{% case discriminator %}
+    {% when 0 %}light
+    {% when 1 %}grey
+    {% when 2 %}greyrev
+{% endcase %}
+{% endcapture %}
+<div id="{{ page.id | default: page.title | slugify: 'latin' }}" class="section md-padding bg-{{ background | strip | default: 'light' }}">
+    <div class="container">
+        <div class="section-header text-center">
+            <h2 class="title">{{ page.title }}</h2>
+        </div>
+        <div class="row">
+            {% if page.media == null %}
+                <div class="col-md-12">
+                    {{ page }}
+                </div>
+            {% elsif leftright == 0 %}
+                <div class="col-md-8">
+                    {{ page }}
+                </div>
+                <div class="col-md-4">
+                    {% for media in page.media %}
+                        {% include mediabox.image.html src=media.src alt=media.alt %}
+                    {% endfor %}
+                </div>
+            {% else %}
+                <div class="col-md-4">
+                    {% for media in page.media %}
+                    {% include mediabox.image.html src=media.src alt=media.alt %}
+                    {% endfor %}
+                </div>
+                <div class="col-md-8">
+                    {{ page }}
+                </div>
+            {% endif %}
+        </div>
+    </div>
 </div>
