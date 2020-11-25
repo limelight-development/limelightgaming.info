@@ -2,3 +2,14 @@
 ---
 
 @import "theme.scss";
+
+body {
+	min-height: 100vw;
+}
+nav {
+	position: absolute !important;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	width: 100%;
+}
