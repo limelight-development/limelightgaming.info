@@ -1,0 +1,30 @@
+#collections:
+#  - jobs
+#
+#defaults:
+#  -
+#    scope:
+#      path: "_jobs"
+#    values:
+#      layout: "card"
+
+title: Limelight Gaming
+
+plugins:
+  - jekyll-seo-tag
+
+tagline: "Take the Limelight."
+description: "Information about Limelight Gaming and its projects."
+logo: "/assets/img/logo.png"
+
+social:
+  links:
+    - https://github.com/limelight-development/
+    - https://steamcommunity.com/groups/LimeLightG
+    - https://limelightgaming.net/
+
+lang: en_GB
+locale: en_GB
+
+twitter:
+  card: summary
