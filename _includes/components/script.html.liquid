@@ -1,0 +1,1 @@
+<script type="{{ include.link.type | default: 'application/javascript' }}" src="{{ include.link.src | relative_url }}"{% if include.link.integrity != null %} integrity="{{ include.link.integrity }}"{% endif %}{% if include.link.crossorigin != null %} crossorigin="{{ include.link.crossorigin }}"{% endif %}></script>
