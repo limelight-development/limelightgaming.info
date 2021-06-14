@@ -31,8 +31,8 @@ jobs:
           find ${{ steps.branch_root.outputs.deploy_root }} ! -name '${{ steps.branch_root.outputs.deploy_exclude }}' -type d -depth -exec rmdir "{}" +
       - name: Deploy Cleanup
         run: |
-          git config user.name ${{ github.payload.pusher.name }}
-          git config user.email ${{ github.payload.pusher.email }}
+          git config user.name "Limelight Cleanup Service"
+          git config user.email "automation@limelightgaming.net"
           git add --all "${{ steps.branch_root.outputs.deploy_root }}"
           git commit -m "Cleaned up deleted branch: ${{ github.event.ref }} 🗑️" --no-verify
           git push --force
