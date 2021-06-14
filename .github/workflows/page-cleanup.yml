@@ -24,3 +24,4 @@ jobs:
           folder: _site
           target-folder: ${{ steps.branch_root.outputs.deploy_root }}
           clean-exclude: ${{ steps.branch_root.outputs.deploy_exclude }}
+          commit-message: "Cleaned up deleted branch: ${{ github.event.ref }}"
