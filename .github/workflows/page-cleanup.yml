@@ -20,12 +20,12 @@ jobs:
         with:
           ref: gh-pages
       - name: Remove Files
-        if: ${{ steps.branch_root.outputs.deploy_exclude == "" }}
+        if: ${{ steps.branch_root.outputs.deploy_exclude == '' }}
         run: |
           find ${{ steps.branch_root.outputs.deploy_root }} -type f -depth -exec echo "{}" +
           find ${{ steps.branch_root.outputs.deploy_root }} -type d -depth -exec echo "{}" +
       - name: Remove Unfiltered Files
-        if: ${{ steps.branch_root.outputs.deploy_exclude != "" }}
+        if: ${{ steps.branch_root.outputs.deploy_exclude != '' }}
         run: |
           find ${{ steps.branch_root.outputs.deploy_root }} ! -name '${{ steps.branch_root.outputs.deploy_exclude }}' -type f -depth -exec echo "{}" +
           find ${{ steps.branch_root.outputs.deploy_root }} ! -name '${{ steps.branch_root.outputs.deploy_exclude }}' -type d -depth -exec echo "{}" +
