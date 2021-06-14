@@ -29,11 +29,10 @@ jobs:
         run: |
           find ${{ steps.branch_root.outputs.deploy_root }} ! -name '${{ steps.branch_root.outputs.deploy_exclude }}' -type f -depth -exec rmdir "{}" +
           find ${{ steps.branch_root.outputs.deploy_root }} ! -name '${{ steps.branch_root.outputs.deploy_exclude }}' -type d -depth -exec rmdir "{}" +
-#      - name: Deploy Cleanup
-#        uses: JamesIves/github-pages-deploy-action@4.1.4
-#        with:
-#          branch: gh-pages
-#          folder: _site
-#          target-folder: ${{ steps.branch_root.outputs.deploy_root }}
-#          clean-exclude: ${{ steps.branch_root.outputs.deploy_exclude }}
-#          commit-message: "Cleaned up deleted branch: ${{ github.event.ref }}"
+      - name: Deploy Cleanup
+        run: |
+          git config user.name ${{ github.context.payload.pusher.name }}
+          git config user.email ${{ github.context.payload.pusher.email }}
+          git add --all "${{ steps.branch_root.outputs.deploy_root }}"
+          git commit -m "Cleaned up deleted branch: ${{ github.event.ref }} 🗑️" "${{ steps.branch_root.outputs.deploy_root }}" --quiet --no-verify
+          git push --force
