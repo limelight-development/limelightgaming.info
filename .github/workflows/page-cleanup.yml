@@ -22,13 +22,13 @@ jobs:
       - name: Remove Files
         if: ${{ steps.branch_root.outputs.deploy_exclude == '' }}
         run: |
-          find ${{ steps.branch_root.outputs.deploy_root }} -type f -depth -exec echo "{}" +
-          find ${{ steps.branch_root.outputs.deploy_root }} -type d -depth -exec echo "{}" +
+          find ${{ steps.branch_root.outputs.deploy_root }} -type f -depth -exec rm "{}" +
+          find ${{ steps.branch_root.outputs.deploy_root }} -type d -depth -exec rm "{}" +
       - name: Remove Unfiltered Files
         if: ${{ steps.branch_root.outputs.deploy_exclude != '' }}
         run: |
-          find ${{ steps.branch_root.outputs.deploy_root }} ! -name '${{ steps.branch_root.outputs.deploy_exclude }}' -type f -depth -exec echo "{}" +
-          find ${{ steps.branch_root.outputs.deploy_root }} ! -name '${{ steps.branch_root.outputs.deploy_exclude }}' -type d -depth -exec echo "{}" +
+          find ${{ steps.branch_root.outputs.deploy_root }} ! -name '${{ steps.branch_root.outputs.deploy_exclude }}' -type f -depth -exec rmdir "{}" +
+          find ${{ steps.branch_root.outputs.deploy_root }} ! -name '${{ steps.branch_root.outputs.deploy_exclude }}' -type d -depth -exec rmdir "{}" +
 #      - name: Deploy Cleanup
 #        uses: JamesIves/github-pages-deploy-action@4.1.4
 #        with:
