@@ -17,6 +17,10 @@ jobs:
           deleted_ref: ${{ github.event.ref }}
       - name: Create Empty Folder
         run: mkdir _site
+      - name: Locally Remove Ignored Files
+        run: |
+          (rm CNAME > /dev/null 2>&1 || true)
+          (rm .nojekyll > /dev/null 2>&1 || true)
       - name: Deploy Cleanup
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
