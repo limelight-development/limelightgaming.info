@@ -23,11 +23,11 @@ jobs:
         if: ${{ steps.branch_root.outputs.deploy_exclude == '' }}
         run: |
           find ${{ steps.branch_root.outputs.deploy_root }} -type f -depth -exec rm "{}" +
-          find ${{ steps.branch_root.outputs.deploy_root }} -type d -depth -exec rm "{}" +
+          find ${{ steps.branch_root.outputs.deploy_root }} -type d -depth -exec rmdir "{}" +
       - name: Remove Unfiltered Files
         if: ${{ steps.branch_root.outputs.deploy_exclude != '' }}
         run: |
-          find ${{ steps.branch_root.outputs.deploy_root }} ! -name '${{ steps.branch_root.outputs.deploy_exclude }}' -type f -depth -exec rmdir "{}" +
+          find ${{ steps.branch_root.outputs.deploy_root }} ! -name '${{ steps.branch_root.outputs.deploy_exclude }}' -type f -depth -exec rm "{}" +
           find ${{ steps.branch_root.outputs.deploy_root }} ! -name '${{ steps.branch_root.outputs.deploy_exclude }}' -type d -depth -exec rmdir "{}" +
       - name: Deploy Cleanup
         run: |
