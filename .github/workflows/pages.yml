@@ -1,0 +1,39 @@
+on:
+  push:
+    branches-ignore:
+      - gh-pages
+
+name: Page Build & Deployment
+
+jobs:
+  build:
+    name: Build & Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Fetch Gem Dependency Cache
+        uses: actions/cache@v2
+        id: gem-cache
+        with:
+          path: vendor/cache
+          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-gems-
+      - name: Install Dependencies
+        run: (cat Gemfile.lock > /dev/null && (sudo gem install bundler -v "$(grep -A 1 "BUNDLED WITH" Gemfile.lock | tail -n 1)") || sudo gem install bundler) && bundler config set deployment 'true' && bundler install
+      - name: Build Cache
+        run: bundler cache
+        if: steps.gem-cache.outputs.cache-hit != 'true'
+      - name: Build Site
+        run: bundle exec jekyll build
+      - name: Get Deployment Root
+        id: branch_root
+        run: .github/scripts/branch-root.sh
+      - name: Deploy Site
+        uses: JamesIves/github-pages-deploy-action@4.1.4
+        with:
+          branch: gh-pages
+          folder: _site
+          target-folder: ${{ steps.branch_root.outputs.deploy_root }}
+          clean-exclude: ${{ steps.branch_root.outputs.deploy_exclude }}
