@@ -30,6 +30,10 @@ jobs:
       - name: Get Deployment Root
         id: branch_root
         run: .github/scripts/branch-root.sh
+      - name: Locally Remove Ignored Files
+        run: |
+          rm CNAME > /dev/null 2>&1
+          rm .nojekyll > /dev/null 2>&1
       - name: Deploy Site
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
