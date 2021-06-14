@@ -1,5 +1,7 @@
 on:
-  push
+  push:
+    branches-ignore:
+      - gh-pages
 
 name: Page Build & Deployment
 
