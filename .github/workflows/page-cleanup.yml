@@ -1,0 +1,11 @@
+on:
+  delete
+
+name: Deleted Branch Staging Cleanup
+
+jobs:
+  cleanup:
+    - name: Dump Event context
+      env:
+        GITHUB_CONTEXT: ${{ toJSON(github.event) }}
+      run: echo "$GITHUB_CONTEXT"
