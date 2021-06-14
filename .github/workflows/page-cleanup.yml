@@ -8,7 +8,19 @@ jobs:
     runs-on: ubuntu-latest
     name: Cleanup
     steps:
-      - name: Dump Event context
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Get Deployment Root
+        id: branch_root
+        run: .github/scripts/del-branch-root.sh
         env:
-          GITHUB_CONTEXT: ${{ toJSON(github.event) }}
-        run: echo "$GITHUB_CONTEXT"
+          deleted_ref: ${{ github.event.ref }}
+      - name: Create Empty Folder
+        run: mkdir _site
+      - name: Deploy Cleanup
+        uses: JamesIves/github-pages-deploy-action@4.1.4
+        with:
+          branch: gh-pages
+          folder: _site
+          target-folder: ${{ steps.branch_root.outputs.deploy_root }}
+          clean-exclude: ${{ steps.branch_root.outputs.deploy_exclude }}
