@@ -34,5 +34,5 @@ jobs:
           git config user.name ${{ github.context.payload.pusher.name }}
           git config user.email ${{ github.context.payload.pusher.email }}
           git add --all "${{ steps.branch_root.outputs.deploy_root }}"
-          git commit -m "Cleaned up deleted branch: ${{ github.event.ref }} 🗑️" "${{ steps.branch_root.outputs.deploy_root }}" --quiet --no-verify
+          git commit -m "Cleaned up deleted branch: ${{ github.event.ref }} 🗑️" --no-verify
           git push --force
