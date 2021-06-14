@@ -1,9 +1,8 @@
 # limelightgaming.info
-The basic informational site for LL's open source / business side.
+The basic informational site for Limelight Development.
 
 ## Deployment
 
-Deployment is handed through default GitHub Pages.
-Master branch is deployed to the live site, no other branches are.
-
+Deployment is handed through Actions, deplying to the gh-pages branch.
+Master branch is deployed to /, while all other branches are deployed to branches/<slug>.
 Local development & testing should take place using the provided gems.
