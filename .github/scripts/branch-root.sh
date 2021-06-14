@@ -1,7 +1,7 @@
 #!/bin/bash
 
 case $GITHUB_REF in
-	"heads/refs/main" | "heads/refs/master" )
+	"refs/heads/main" | "refs/heads/master" )
 		echo "::set-output name=deploy_root::/"
 		echo "::set-output name=deploy_exclude::branches"
 		;;
