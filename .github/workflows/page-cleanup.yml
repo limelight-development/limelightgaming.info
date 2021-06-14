@@ -15,17 +15,25 @@ jobs:
         run: .github/scripts/del-branch-root.sh
         env:
           deleted_ref: ${{ github.event.ref }}
-      - name: Create Empty Folder
-        run: mkdir _site
-      - name: Locally Remove Ignored Files
-        run: |
-          (rm CNAME > /dev/null 2>&1 || true)
-          (rm .nojekyll > /dev/null 2>&1 || true)
-      - name: Deploy Cleanup
-        uses: JamesIves/github-pages-deploy-action@4.1.4
+      - name: Switch to Pages Branch
+        uses: actions/checkout@v2
         with:
-          branch: gh-pages
-          folder: _site
-          target-folder: ${{ steps.branch_root.outputs.deploy_root }}
-          clean-exclude: ${{ steps.branch_root.outputs.deploy_exclude }}
-          commit-message: "Cleaned up deleted branch: ${{ github.event.ref }}"
+          ref: gh-pages
+      - name: Remove Files
+        if: ${{ steps.branch_root.outputs.deploy_exclude == "" }}
+        run: |
+          find ${{ steps.branch_root.outputs.deploy_root }} -type f -depth -exec echo "{}" +
+          find ${{ steps.branch_root.outputs.deploy_root }} -type d -depth -exec echo "{}" +
+      - name: Remove Unfiltered Files
+        if: ${{ steps.branch_root.outputs.deploy_exclude != "" }}
+        run: |
+          find ${{ steps.branch_root.outputs.deploy_root }} ! -name '${{ steps.branch_root.outputs.deploy_exclude }}' -type f -depth -exec echo "{}" +
+          find ${{ steps.branch_root.outputs.deploy_root }} ! -name '${{ steps.branch_root.outputs.deploy_exclude }}' -type d -depth -exec echo "{}" +
+#      - name: Deploy Cleanup
+#        uses: JamesIves/github-pages-deploy-action@4.1.4
+#        with:
+#          branch: gh-pages
+#          folder: _site
+#          target-folder: ${{ steps.branch_root.outputs.deploy_root }}
+#          clean-exclude: ${{ steps.branch_root.outputs.deploy_exclude }}
+#          commit-message: "Cleaned up deleted branch: ${{ github.event.ref }}"
