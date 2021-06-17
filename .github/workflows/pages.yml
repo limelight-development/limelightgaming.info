@@ -25,11 +25,11 @@ jobs:
       - name: Build Cache
         run: bundler cache
         if: steps.gem-cache.outputs.cache-hit != 'true'
-      - name: Build Site
-        run: bundle exec jekyll build
       - name: Get Deployment Root
         id: branch_root
         run: .github/scripts/branch-root.sh
+      - name: Build Site
+        run: bundle exec jekyll build --baseurl "${{ steps.branch_root.outputs.deploy_baseurl }}"
       - name: Deploy Site
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
