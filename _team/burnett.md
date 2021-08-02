@@ -5,4 +5,4 @@ links:
   steam: id/Steve-A-Nature
   github: burnett01
 ---
-Software developer (not engineer) and I'm interested in IT security and music.
+I'm a Software Developer (*not* a Software Engineer) and I'm interested in IT Security and Music.
