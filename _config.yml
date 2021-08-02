@@ -1,5 +1,6 @@
 collections:
   - homework
+  - team
 
 defaults:
   -
@@ -7,6 +8,11 @@ defaults:
       path: "_homework"
     values:
       layout: "homework"
+  -
+    scope:
+      path: "_team"
+    values:
+      layout: "team_member"
 
 title: Limelight Gaming
 
