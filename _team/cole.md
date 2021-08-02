@@ -5,4 +5,4 @@ links:
   github: Cole012
   _discord: Cole#1295
 ---
-Do PHP, SQF and the most boring languages you could think of :))
+I do PHP, SQF and all of the most boring languages you can think of :)
