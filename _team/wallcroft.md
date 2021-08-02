@@ -6,4 +6,5 @@ links:
   github: LTWallcroft
   _discord: Wallcroft#9999
 ---
-LimeLight Development Advisor - I have a brain, It just doesn't do the codey stuff, my brain doesn't approve of it.
+I'm an advisor for Limelight Development.  
+I have a brain, it just doesn't do the code stuff; my brain doesn't approve of it.
