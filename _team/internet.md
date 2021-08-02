@@ -6,4 +6,4 @@ links:
   github: JoshPiper
   _discord: "idk what we're gonna put here tbh"
 ---
-this is a description, don't be a twat with it though.
+I'm Internet, a manager at Limelight Development, a curator for GModStore and a Stage Engineer for Theatre and Music Productions.
