@@ -1,4 +1,19 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<div class="lldev-nav" id="myTopnav">
+    <a href="#home"><img class="ll-nav-logo" src="{{ '/assets/images/lldev_logono2_min.png' | relative_url }}"></a>
+    <div class="ll-nav-links">
+        {% for nav in site.data.nav %}
+            {% include nav.item.html.liquid nav=nav %}
+        {% endfor %}
+        <!--<a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>-->
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+</div>
+
+<!--<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <span class="navbar-brand"><img src="{{ '/assets/img/logo.png' | relative_url }}" alt="Limelight Gaming"></span>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -11,3 +26,5 @@
         </ul>
     </div>
 </nav>
+
+-->
