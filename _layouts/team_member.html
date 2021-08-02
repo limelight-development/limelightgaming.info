@@ -1,0 +1,23 @@
+<div class="lldev-team-box-indv">
+	<div class="lldev-team-box-top">
+		<div class="lldev-team-avatar">
+			<img src="{{ page.avatar }}">
+		</div>
+		<div class="lldev-team-details">
+			<div class="member-title">
+				<div class="member-name">{{ page.name }}</div>
+				<div class="member-role">{{ page.role }}</div>
+			</div>
+			<div class="member-desc">
+				{{ page.content }}
+			</div>
+		</div>
+	</div>
+	<div class="member-social">
+		{% if page.links and page.links.size > 0 %}
+			{% if page.links.steam %}<a href="https://steamcommunity.com/{{ page.links.steam }}" class="steam-link"><i class="fab fa-steam-symbol"></i></a>{% endif %}
+			{% if page.links.github %}<a href="https://steamcommunity.com/{{ page.links.github }}" class="steam-link"><i class="fab fa-github"></i></a>{% endif %}
+			{% if page.links.discord %}<a href="https://steamcommunity.com/{{ page.links.discord }}" class="steam-link"><i class="fab fa-discord"></i></a>{% endif %}
+		{% endif %}
+	</div>
+</div>
