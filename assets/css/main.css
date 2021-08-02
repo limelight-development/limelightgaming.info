@@ -11,6 +11,8 @@ body {
     background-repeat: no-repeat;
     min-height: 100vh;
     height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .ll-nav-logo {
@@ -170,7 +172,11 @@ body {
 }
 
 #footer {
-  position: relative; }
+    position: relative;
+    width: 100%;
+    margin-top: auto;
+    padding: 20px 50px;
+    color: white; }
 
 .footer-logo {
   text-align: center;
