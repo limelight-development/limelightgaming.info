@@ -5,4 +5,5 @@ links:
   steam: id/wojtektm
   github: "livkx"
 ---
-A cynical Sysadmin - Love automation, infrastructure and security. I write Lua for funny sandbox game.
+I'm a cynical Systems Administrator, who loves automation, infrastructure and security.  
+I write Lua for a funny sandbox game.
