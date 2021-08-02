@@ -1,7 +1,8 @@
 <div class="lldev-team-box-indv">
 	<div class="lldev-team-box-top">
 		<div class="lldev-team-avatar">
-			<img src="{{ page.avatar }}">
+			{% assign avatar_png = '/assets/avatars/' | append: page.slug | append: '.png' | relative_url %}
+			<img src="{{ page.avatar | default: avatar_png }}">
 		</div>
 		<div class="lldev-team-details">
 			<div class="member-title">
