@@ -4,6 +4,6 @@ avatar: https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avat
 links:
   steam: profiles/76561197995219821
   github: LTWallcroft
-  _discord: "Wallcroft#9999”
+  _discord: Wallcroft#9999
 ---
 LimeLight Development Advisor - I have a brain, It just doesn't do the codey stuff, my brain doesn't approve of it.
