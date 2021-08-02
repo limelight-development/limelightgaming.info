@@ -1,5 +1,6 @@
 ---
 name: Cole
+role: "Developer"
 links:
   steam: id/itsaaacole
   github: Cole012

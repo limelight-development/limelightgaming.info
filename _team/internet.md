@@ -1,6 +1,7 @@
 ---
 name: Internet
 avatar: https://doctor-internet.dev/img/logo.png
+role: "Manager &\nDeveloper"
 links:
   steam: DocInternet
   github: JoshPiper

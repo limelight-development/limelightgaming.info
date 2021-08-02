@@ -1,6 +1,7 @@
 ---
 name: Wallcroft
 avatar: https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/ca/ca5c77a65c45a56c3d528d61b77a9100a1970b9b_full.jpg
+role: "Advisor"
 links:
   steam: profiles/76561197995219821
   github: LTWallcroft

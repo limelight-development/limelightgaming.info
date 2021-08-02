@@ -6,8 +6,8 @@
 		</div>
 		<div class="lldev-team-details">
 			<div class="member-title">
-				<div class="member-name">{{ page.name }}</div>
-				<div class="member-role">{{ page.role }}</div>
+				<div class="member-name">{{ page.name | markdownify }}</div>
+				<div class="member-role">{{ page.role | markdownify }}</div>
 			</div>
 			<div class="member-desc">
 				{{ page.content }}
