@@ -129,6 +129,35 @@ a.btn-tertiary {
 
 /* Navigation */
 
+.nav.container {
+  position: sticky;
+  top: 0;
+  transition: .15s;
+}
+
+.nav.nav-scroll .wrapper {
+  position: relative;
+  margin-top: 2rem;
+  padding-top: 0px;
+}
+
+.nav.container:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 0px;
+  top: 0;
+  left: 0;
+  background: rgba(15,19,26,0.9);
+  z-index: -1;
+  transition: .3s;
+  backdrop-filter: blur(3px);
+}
+
+.nav.container.nav-scroll:after {
+  height: 60px;
+}
+
 .nav .wrapper {
   position: sticky;
   height: 60px;
@@ -138,6 +167,7 @@ a.btn-tertiary {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  transition: .15s;
 }
 
 .nav img.logo {
