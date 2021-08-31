@@ -199,7 +199,7 @@ a.btn-tertiary {
   color: #FFF;
   font-size: 13px;
   font-weight: 700;
-  background: var(--dark-600);
+  //background: var(--dark-600);
   border-radius: 4px;
   display: flex;
   align-items: center;
@@ -288,4 +288,45 @@ a.btn-tertiary {
 
 .service .service-icon i {
   font-size: 24px;
+}
+
+
+
+/* stats */
+
+.stats .wrapper {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+.stats .stats-columns {
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  grid-column-gap: 120px;
+}
+
+.stats .stats-single {
+  font-family: var(--heading-font-family);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-row-gap: 10px;
+}
+
+.stats-single .stats-title {
+  color: var(--limelight-blue);
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.stats-single .stats-value {
+  color: #FFF;
+  font-size: 64px;
+  font-weight: 700;
+}
+
+.stats-single .stats-subtitle {
+  color: var(--dark-400);
+  font-size: 20px;
 }
