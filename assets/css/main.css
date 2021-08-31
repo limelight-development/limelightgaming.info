@@ -2,42 +2,42 @@
 /* Global */
 
 @font-face {
-    font-family: 'Roobert';
-    src: url('../font/Roobert-Regular.woff2') format('woff2'),
-         url('../font/Roobert-Regular.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
+  font-family: 'Roobert';
+  src: url('../font/Roobert-Regular.woff2') format('woff2'),
+       url('../font/Roobert-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Roobert';
-    src: url('../font/Roobert-SemiBold.woff2') format('woff2'),
-         url('../font/Roobert-SemiBold.woff') format('woff');
-    font-weight: 500;
-    font-style: normal;
+  font-family: 'Roobert';
+  src: url('../font/Roobert-SemiBold.woff2') format('woff2'),
+       url('../font/Roobert-SemiBold.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Roobert';
-    src: url('../font/Roobert-Bold.woff2') format('woff2'),
-         url('../font/Roobert-Bold.woff') format('woff');
-    font-weight: 700;
-    font-style: normal;
+  font-family: 'Roobert';
+  src: url('../font/Roobert-Bold.woff2') format('woff2'),
+       url('../font/Roobert-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
 }
 
 :root {
-    --dark-400: #adb3cb;
-    --dark-500: #595F77;
-    --dark-600: #323646;
-    --dark-700: #242A38;
-    --dark-750: #1F2431;
-    --dark-800: #181D29;
-    --dark-900: #0F131A;
-    --limelight-blue: #42a5f5;
-    --limelight-bluealt: #0C80DE;
+  --dark-400: #adb3cb;
+  --dark-500: #595F77;
+  --dark-600: #323646;
+  --dark-700: #242A38;
+  --dark-750: #1F2431;
+  --dark-800: #181D29;
+  --dark-900: #0F131A;
+  --limelight-blue: #42a5f5;
+  --limelight-bluealt: #0C80DE;
 
-    --heading-font-family: 'Roobert', sans-serif;
-    --body-font-family: 'Roboto', sans-serif;
+  --heading-font-family: 'Roobert', sans-serif;
+  --body-font-family: 'Roboto', sans-serif;
 }
 
 html {
@@ -48,15 +48,32 @@ html {
 }
 
 h1,h2,h3,h4,h5,h6 {
+  color: #FFF;
   font-family: var(--heading-font-family);
   line-height: normal;
 }
 
 h1 {
-  color: #FFF;
   font-size: 64px;
   font-weight: 700;
   line-height: 120%;
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: 700;
+  text-align: center;
+}
+
+h3 {
+  padding-bottom: 18px;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+p {
+  font-size: 15px;
+  line-height: 20px;
 }
 
 a {
@@ -178,7 +195,7 @@ a.btn-tertiary {
 
 .hero .wrapper {
   padding-top: 20rem;
-  padding-bottom: 20rem;
+  padding-bottom: 10rem;
 }
 
 .hero h1 {
@@ -189,4 +206,56 @@ a.btn-tertiary {
   margin-top: 60px;
   display: flex;
   grid-column-gap: 20px;
+}
+
+
+
+/* Serivce */
+
+.service .wrapper {
+  padding-top: 10rem;
+  padding-bottom: 6rem;
+}
+
+.service .service-columns {
+  margin-top: 108px;
+  display: flex;
+  grid-column-gap: 30px;
+}
+
+.service .service-single {
+  padding: 30px 20px;
+  text-align: center;
+  background: var(--dark-800);
+  border: 1px solid var(--dark-700);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.service .service-single:hover .service-icon {
+  color: #FFF;
+  background: var(--limelight-blue);
+  border: 1px solid var(--limelight-bluealt);
+}
+
+.service .service-icon {
+  margin-top: -60px;
+  margin-bottom: 24px;
+  width: 56px;
+  height: 56px;
+  color: var(--dark-400);
+  background: var(--dark-700);
+  border: 1px solid var(--dark-600);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+  transition: .15s;
+}
+
+.service .service-icon i {
+  font-size: 24px;
 }
