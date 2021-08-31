@@ -1,1 +1,0 @@
-<link type="{{ include.link.type | default: 'text/css' }}" href="{{ include.link.href | relative_url }}" rel="{{ include.link.rel | default: 'stylesheet' }}"{% if include.link.integrity != null %} integrity="{{ include.link.integrity }}"{% endif %}{% if include.link.crossorigin != null %} crossorigin="{{ include.link.crossorigin }}"{% endif %}>
