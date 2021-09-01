@@ -119,6 +119,24 @@ a.btn-tertiary {
   box-shadow: none;
 }
 
+a.btn-quart {
+  width: max-content;
+  padding: 0;
+  color: var(--dark-400);
+  font-size: 14px;
+  background: none !important;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+a.btn-quart i {
+  color: var(--limelight-blue);
+}
+
+a.btn-quart:hover {
+  color: #FFF;
+}
+
 
 
 /* Animations */
@@ -182,6 +200,7 @@ a.btn-tertiary {
 .nav.container {
   position: sticky;
   top: 0;
+  z-index: 100;
   transition: .15s;
 }
 
@@ -310,6 +329,7 @@ a.btn-tertiary {
   border: 1px solid var(--dark-700);
   border-radius: 4px;
   display: flex;
+  flex: 1;
   flex-direction: column;
   align-items: center;
 }
@@ -558,7 +578,7 @@ a.btn-tertiary {
 }
 
 .server .server-single:hover .server-status:after {
-  content: ' - Click to Join';
+  //content: ' - Click to Join';
 }
 
 .server #server-bg {
@@ -574,4 +594,51 @@ a.btn-tertiary {
   animation-fill-mode: forwards;
   filter: grayscale(0.75) hue-rotate(165deg);
   z-index: -1;
+}
+
+
+
+/* Projects */
+
+.project .wrapper {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+.project .project-columns {
+  margin-top: 108px;
+  display: flex;
+  grid-column-gap: 30px;
+}
+
+.project .project-single {
+  padding: 30px 20px;
+  background: var(--dark-800);
+  border: 1px solid var(--dark-700);
+  border-radius: 4px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.project-single .project-tag {
+  position: relative;
+  width: max-content;
+  margin-top: -42px;
+  margin-bottom: 20px;
+  padding: 6px 7px;
+  color: #FFF;
+  font-size: 12px;
+  font-weight: 500;
+  font-family: var(--heading-font-family);
+  background: var(--limelight-blue);
+  border-radius: 2px;
+}
+
+.project-single p {
+  margin-bottom: 30px;
+}
+
+.project-single a.btn-quart {
+  margin-top: auto;
 }
