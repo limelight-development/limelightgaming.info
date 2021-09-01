@@ -1,0 +1,16 @@
+html {
+    color: var(--dark-400);
+    background: var(--dark-900);
+    font-family: var(--body-font-family);
+    font-feature-settings: 'salt' on;
+}
+
+.team .team-single {
+    padding: 30px 20px;
+    background: var(--dark-800);
+    border: 1px solid var(--dark-700);
+    border-radius: 4px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
