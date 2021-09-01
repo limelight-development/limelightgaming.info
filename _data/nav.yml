@@ -1,10 +1,8 @@
-- title: News
-  href: /#news
-- title: Contact
-  href: /#contact
 - title: About
   href: /#about
-- title: Home
-  href: /
-- title: GitHub
-  href: https://github.com/limelight-development/
+- title: Projects
+  href: /#projects
+- title: Forums
+  href: /#forums
+- title: Contact
+  href: /#contact
