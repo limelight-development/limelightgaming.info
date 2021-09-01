@@ -1,6 +1,9 @@
-<div class="lldev-nav" id="myTopnav">
-    <a href="#home"><img class="ll-nav-logo" src="{{ '/assets/images/lldev_logono2_min.png' | relative_url }}"></a>
-    <div class="ll-nav-links">
+<div class="nav container">
+    <div class="wrapper">
+      <a href="#">
+        <img class="logo" src="assets/img/limelight-dark-logo.svg" alt="Limelight Gaming"/>
+      </a>
+      <div class="nav-links">
         {% for nav in site.data.nav %}
             {% include nav.item.html.liquid nav=nav %}
         {% endfor %}
@@ -10,8 +13,13 @@
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
             <i class="fa fa-bars"></i>
         </a>
+      </div>
+      <div class="nav-user">
+        <a href="#" class="btn-nav signup">Sign Up</a>
+        <a href="#" class="btn-nav login"><i class="fa-solid fa-user"></i> Log In</a>
+      </div>
     </div>
-</div>
+  </div>
 
 <!--<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <span class="navbar-brand"><img src="{{ '/assets/img/logo.png' | relative_url }}" alt="Limelight Gaming"></span>
