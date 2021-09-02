@@ -1,4 +1,4 @@
-  section: main
+- section: main
   links:
     - title: About
       icon: fa-circle-info
@@ -12,7 +12,7 @@
     - title: Team
       icon: fa-user-astronaut 
       href: /#team
-  section: forums
+- section: forums
   links:
     - title: Meta
       icon: fa-messages
@@ -29,7 +29,7 @@
     - title: Archive
       icon: fa-box-archive
       href: /#archive
-  section: resources
+- section: resources
   links:
     - title: Help & Support
       icon: fa-circle-question
