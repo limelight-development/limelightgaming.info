@@ -185,7 +185,7 @@ a.btn-quart:hover {
 }
 
 .page-bg.bgfix {
-  margin-top: -28px; 
+  margin-top: -28px;
 }
 
 
@@ -210,8 +210,17 @@ a.btn-quart:hover {
   0% {
     color: var(--dark-500);
   }
-  50% {
+  10% {
     color: var(--danger);
+  }
+  20% {
+    color: var(--dark-500);
+  }
+  30% {
+    color: var(--danger);
+  }
+  40% {
+    color: var(--dark-500);
   }
   100% {
     color: var(--dark-500);
@@ -412,12 +421,18 @@ a.btn-quart:hover {
   flex: 1;
   flex-direction: column;
   align-items: center;
+  transition: .15s;
+}
+
+.service .service-single:hover {
+  transform: translateY(-8px);
 }
 
 .service .service-single:hover .service-icon {
   color: #FFF;
   background: var(--limelight-blue);
   border: 1px solid var(--limelight-bluealt);
+  transform: translateY(-4px);
 }
 
 .service .service-icon {
@@ -634,7 +649,7 @@ a.btn-quart:hover {
 }
 
 .server-single.server-offline .server-status {
-  animation: offline 10s ease-in-out infinite;
+  animation: offline 3s ease-in-out infinite;
 }
 
 .server-single .server-info {
@@ -791,7 +806,7 @@ a.btn-quart:hover {
 a.btn-team {
   padding: 7px 8px;
   color: var(--dark-400);
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 500;
   font-family: var(--heading-font-family);
   border-radius: 2px;
@@ -838,6 +853,10 @@ a.btn-team:hover {
 
 .footer .footer-column:first-of-type {
   margin-right: auto;
+}
+
+.footer .footer-logo {
+  width: max-content;
 }
 
 .footer .footer-logo img {
