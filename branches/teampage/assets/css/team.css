@@ -15,3 +15,13 @@ html {
 .team .team-grid {
     max-width: fit-content;
 }
+
+/* Temporary Size Styling */ 
+
+.team .team-grid {
+    max-width: fit-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: start;
+}
