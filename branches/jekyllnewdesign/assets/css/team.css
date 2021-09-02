@@ -1,0 +1,27 @@
+html {
+    color: var(--dark-400);
+    background: var(--dark-900);
+    font-family: var(--body-font-family);
+    font-feature-settings: 'salt' on;
+}
+
+.team .team-single {
+    padding: 30px 20px;
+    background: var(--dark-800);
+    border: 1px solid var(--dark-700);
+    border-radius: 4px;
+}
+
+.team .team-grid {
+    max-width: fit-content;
+}
+
+/* Temporary Size Styling */ 
+
+.team .team-grid {
+    max-width: fit-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: start;
+}
