@@ -7,5 +7,5 @@ gamebackground: assets/img/cityrp-hero.jpg
 map: Evocity V2D
 serverloc: Europe
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore magna aliqua.
-serverlink: #
+serverlink: "#"
 ---
