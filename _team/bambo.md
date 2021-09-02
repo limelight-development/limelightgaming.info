@@ -1,6 +1,6 @@
 ---
 name: Bambo
-avatar: /assets/img/team/bambolicious.jpg
+avatar: assets/img/team/bambolicious.jpg
 role: "Designer &\nDeveloper"
 links:
   profile: Bambolicious

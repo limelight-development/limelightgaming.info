@@ -1,6 +1,6 @@
 ---
 name: Goigle
-avatar: /assets/img/team/goigle.jpg
+avatar: assets/img/team/goigle.jpg
 role: "Developer"
 links:
   profile: #

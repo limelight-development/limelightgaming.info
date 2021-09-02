@@ -1,6 +1,6 @@
 ---
 name: Noble
-avatar: /assets/img/team/noble.jpg
+avatar: assets/img/team/noble.jpg
 role: "Designer &\nDeveloper"
 links:
   profile: Noble
