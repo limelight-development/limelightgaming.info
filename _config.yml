@@ -18,7 +18,7 @@ defaults:
     scope:
       path: "_servers"
     values:
-      layout: "server_items"
+      layout: "servers_item"
 
 title: Limelight Gaming
 
