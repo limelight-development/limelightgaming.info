@@ -1,0 +1,15 @@
+<a class="server-single  server-{{ page.serverstate }}" href="{{ page.serverlink }}">
+    <div class="server-banner" style="background-image: url('{{ page.gamebackground }}');" data-server-bg="{{ page.gamebackground }}">
+        <img src="{{ page.gamelogo }}"/>
+    </div>
+    <div class="server-body">
+        <div class="server-status"><i class="fa-solid fa-user"></i> {{ page.players }}</div>
+            <h4>{{ page.name}}</h4>
+            <p>{{ page.description }}</p>
+                <div class="server-info">
+                    <span><i class="fa-solid fa-map"></i> {{ page.map }}</span>
+                    <span><i class="fa-solid fa-earth-europa"></i> {{ page.serverloc }}</span>
+				</div>
+		</div>
+    </div>
+</a>
