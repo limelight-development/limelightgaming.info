@@ -16,6 +16,18 @@ $(window).scroll(function() {
 });
 
 //
+// Mobile menu functionality
+//
+$('.btn-mobile').click(function() {
+  $('.mobile.container').toggle();
+  $('.nav.container').toggleClass('mobile-open');
+})
+$('.mobile-links a').click(function() {
+  $('.mobile.container').toggle();
+  $('.nav.container').toggleClass('mobile-open');
+})
+
+//
 // Swap server section background
 //
 $('.server-single').mouseenter(function () {

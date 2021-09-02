@@ -176,6 +176,7 @@ a.btn-quart:hover {
   top: 0;
   bottom: 0;
   width: 100%;
+  min-height: 92vh;
   object-fit: cover;
   object-position: center;
   z-index: -10;
@@ -349,6 +350,7 @@ a.btn-quart:hover {
 
 .nav .nav-user {
   display: flex;
+  align-items: center;
   grid-column-gap: 8px;
 }
 
@@ -375,6 +377,122 @@ a.btn-quart:hover {
 
 .nav a.btn-nav i {
   font-size: 11px;
+}
+
+.nav .btn-mobile {
+  display: none;
+  margin-left: 10px;
+  padding: 10px;
+  color: #FFF;
+}
+
+.nav .btn-mobile:hover {
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 860px) {
+  .nav .nav-links {
+    display: none;
+  }
+
+  .nav .btn-mobile {
+    display: initial;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .nav-user a.btn-nav {
+    display: none;
+  }
+}
+
+
+
+/* Mobile */
+
+.mobile.container {
+  position: fixed;
+  top: 60px;
+  height: 100%;
+  background: var(--dark-800);
+  display: none;
+  transition: .15s;
+  z-index: 5;
+}
+
+.mobile .wrapper {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  grid-row-gap: .5rem;
+}
+
+.mobile a.btn-nav {
+  padding: 12px;
+  color: #FFF;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: var(--heading-font-family);
+  background: var(--dark-700);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-column-gap: 4px;
+  transition: .15s;
+}
+
+.mobile a.btn-nav.signup {
+  background: var(--limelight-bluealt);
+}
+
+.mobile a.btn-nav:hover {
+  background: var(--limelight-blue);
+}
+
+.mobile a.btn-nav i {
+  margin-right: 2px;
+  font-size: 14px;
+}
+
+.mobile .mobile-links {
+  margin-top: 1rem;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  grid-row-gap: 1px;
+  overflow: hidden;
+}
+
+.mobile .mobile-links a {
+  padding: 1rem;
+  color: var(--dark-400);
+  font-size: 18px;
+  font-weight: 500;
+  font-family: var(--heading-font-family);
+  background: var(--dark-700);
+  transition: .15s;
+}
+
+.mobile .mobile-links a:hover {
+  color: #FFF;
+  background: var(--dark-600);
+}
+
+.nav.mobile-open .wrapper {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.nav.mobile-open:after {
+  background: var(--dark-900);
+}
+
+@media only screen and (min-width: 860px) {
+  .mobile.container {
+    display: none !important;
+  }
 }
 
 
@@ -837,7 +955,8 @@ a.btn-team:hover {
 }
 
 .footer .wrapper {
-  padding: 60px 0;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .footer .footer-top {
