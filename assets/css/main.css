@@ -230,6 +230,7 @@ a.btn-quart:hover {
   background: rgba(15,19,26,0.9);
   z-index: -1;
   transition: .3s;
+  box-shadow: 0 5px 10px rgb(0 0 0 / 20%);
   backdrop-filter: blur(3px);
 }
 
@@ -257,15 +258,43 @@ a.btn-quart:hover {
 .nav .nav-links {
   height: 100%;
   display: flex;
-  grid-column-gap: 30px;
+  grid-column-gap: 20px;
 }
 
 .nav .nav-links a {
+  position: relative;
+  padding: 0 10px;
   color: var(--dark-400);
   font-size: 15px;
   font-weight: 500;
   display: flex;
   align-items: center;
+  transition: .15s;
+}
+
+.nav .nav-links a:after {
+  position: absolute;
+  content: '';
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background: var(--limelight-blue);
+  transition: .15s;
+}
+
+.nav .nav-links a.active:after {
+  width: 100%;
+}
+
+.nav .nav-links a.active {
+  color: #FFF;
+}
+
+.nav .nav-links a:hover {
+  color: #FFF;
 }
 
 .nav .nav-user {
@@ -797,12 +826,22 @@ a.btn-team:hover {
   font-size: 15px;
   font-weight: 500;
   font-family: var(--heading-font-family);
+  transition: .15s;
 }
 
 .footer-column.footer-menu a i {
   margin-right: 4px;
   color: var(--dark-500);
   font-size: 14px;
+  transition: .15s;
+}
+
+.footer-column.footer-menu a:hover {
+  color: #FFF;
+}
+
+.footer-column.footer-menu a:hover i {
+  color: var(--limelight-blue);
 }
 
 .footer .footer-bottom {
@@ -821,9 +860,14 @@ a.btn-team:hover {
 
 .footer-bottom .footer-social {
   display: flex;
-  grid-column-gap: 20px;
+  grid-column-gap: 26px;
 }
 
 .footer-bottom .footer-social a {
+  color: var(--dark-400);
+  transition: .15s;
+}
+
+.footer-bottom .footer-social a:hover {
   color: #FFF;
 }

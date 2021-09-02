@@ -29,3 +29,26 @@ $('.server-single').mouseenter(function () {
     $('#server-bg').css('animation-name', 'bg-zoom');
   }
 });
+
+//
+// Add class to nav as user scrolls through page
+//
+var addClassOnScroll = function () {
+  var windowTop = $(window).scrollTop();
+  $('.container[id]').each(function (index, elem) {
+    var offsetTop = $(elem).offset().top;
+    var outerHeight = $(this).outerHeight(true);
+
+    if( windowTop > (offsetTop - 350) && windowTop < ( offsetTop + outerHeight)) {
+      var elemId = $(elem).attr('id');
+      $(".nav-links a.active").removeClass('active');
+      $(".nav-links a[href='#" + elemId + "']").addClass('active');
+    }
+  });
+};
+
+$(function () {
+  $(window).on('scroll', function () {
+    addClassOnScroll();
+  });
+});
