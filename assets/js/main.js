@@ -2,13 +2,16 @@
 // Add a class to the header bar if we're scrolled down
 //
 $(window).scroll(function() {
-  var header = $(".nav.container");
+  var header = $('.nav.container');
+  var bgfix = $('.page-bg');
 
   var scroll = $(window).scrollTop();
   if (scroll >= 80) {
-    header.addClass("nav-scroll");
+    header.addClass('nav-scroll');
+    bgfix.addClass('bgfix');
   } else {
-    header.removeClass("nav-scroll");
+    header.removeClass('nav-scroll');
+    bgfix.removeClass('bgfix');
   }
 });
 
