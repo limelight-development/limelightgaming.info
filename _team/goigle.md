@@ -5,6 +5,6 @@ role: "Developer"
 links:
   steam: goigle
   github: goigle
-  discord: goigle#2032
+  _discord: goigle#2032
 ---
 I have a theory about the Travis Scott burger. I think it’s a sham. It’s all a multi million dollar misinformation campaign.

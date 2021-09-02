@@ -6,7 +6,7 @@ links:
   profile: Wallcroft
   steam: profiles/76561197995219821
   github: LTWallcroft
-  discord: Wallcroft#9999
+  _discord: Wallcroft#9999
 ---
 I'm an advisor for Limelight Development.  
 I have a brain, it just doesn't do the code stuff; my brain doesn't approve of it.
