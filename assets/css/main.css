@@ -116,6 +116,7 @@ a.btn-secondary {
 a.btn:hover {
   color: #FFF;
   background: var(--limelight-blue);
+  transform: translateY(-4px);
 }
 
 a.btn i {
@@ -145,6 +146,22 @@ a.btn-quart i {
 
 a.btn-quart:hover {
   color: #FFF;
+  transform: translateY(0) translateX(4px);
+}
+
+.page-bg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: -10;
+  opacity: .2;
+  filter: blur(10px) grayscale(0.75) hue-rotate(165deg);
 }
 
 
@@ -231,7 +248,7 @@ a.btn-quart:hover {
   z-index: -1;
   transition: .3s;
   box-shadow: 0 5px 10px rgb(0 0 0 / 20%);
-  backdrop-filter: blur(3px);
+  //backdrop-filter: blur(3px);
 }
 
 .nav.container.nav-scroll:after {
