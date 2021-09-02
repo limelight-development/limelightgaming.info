@@ -1,4 +1,3 @@
-
 /* Global */
 
 @font-face {
@@ -44,10 +43,30 @@
 }
 
 html {
+  position: relative;
   color: var(--dark-400);
   background: var(--dark-900);
   font-family: var(--body-font-family);
   font-feature-settings: 'salt' on;
+}
+
+body {
+  position: relative;
+}
+
+body:after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../img/grain-overlay.png');
+  z-index: 1000;
+  pointer-events: none;
+  opacity: .3;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -116,6 +135,7 @@ a.btn-secondary {
 a.btn:hover {
   color: #FFF;
   background: var(--limelight-blue);
+  transform: translateY(-4px);
 }
 
 a.btn i {
@@ -145,6 +165,26 @@ a.btn-quart i {
 
 a.btn-quart:hover {
   color: #FFF;
+  transform: translateY(0) translateX(4px);
+}
+
+.page-bg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: -10;
+  opacity: .2;
+  transition: .15s;
+  filter: blur(10px) grayscale(0.75) hue-rotate(165deg);
+}
+
+.page-bg.bgfix {
+  margin-top: -28px;
 }
 
 
@@ -169,8 +209,17 @@ a.btn-quart:hover {
   0% {
     color: var(--dark-500);
   }
-  50% {
+  10% {
     color: var(--danger);
+  }
+  20% {
+    color: var(--dark-500);
+  }
+  30% {
+    color: var(--danger);
+  }
+  40% {
+    color: var(--dark-500);
   }
   100% {
     color: var(--dark-500);
@@ -230,7 +279,7 @@ a.btn-quart:hover {
   background: rgba(15,19,26,0.9);
   z-index: -1;
   transition: .3s;
-  box-shadow: 0 5px 10px rgb(0 0 0 / 20%);
+  //box-shadow: 0 5px 10px rgb(0 0 0 / 20%);
   backdrop-filter: blur(3px);
 }
 
@@ -371,12 +420,18 @@ a.btn-quart:hover {
   flex: 1;
   flex-direction: column;
   align-items: center;
+  transition: .15s;
+}
+
+.service .service-single:hover {
+  transform: translateY(-8px);
 }
 
 .service .service-single:hover .service-icon {
   color: #FFF;
   background: var(--limelight-blue);
   border: 1px solid var(--limelight-bluealt);
+  transform: translateY(-4px);
 }
 
 .service .service-icon {
@@ -593,7 +648,7 @@ a.btn-quart:hover {
 }
 
 .server-single.server-offline .server-status {
-  animation: offline 10s ease-in-out infinite;
+  animation: offline 3s ease-in-out infinite;
 }
 
 .server-single .server-info {
@@ -750,7 +805,7 @@ a.btn-quart:hover {
 a.btn-team {
   padding: 7px 8px;
   color: var(--dark-400);
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 500;
   font-family: var(--heading-font-family);
   border-radius: 2px;
@@ -799,6 +854,10 @@ a.btn-team:hover {
   margin-right: auto;
 }
 
+.footer .footer-logo {
+  width: max-content;
+}
+
 .footer .footer-logo img {
   width: auto;
   height: 42px;
@@ -834,6 +893,10 @@ a.btn-team:hover {
   color: var(--dark-500);
   font-size: 14px;
   transition: .15s;
+}
+
+.footer-column.footer-menu a.focus, .footer-column.footer-menu a.focus i {
+  color: var(--limelight-blue);
 }
 
 .footer-column.footer-menu a:hover {
