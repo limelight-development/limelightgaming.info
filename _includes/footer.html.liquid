@@ -1,14 +1,35 @@
-<footer id="footer" class="sm-padding bg-dark">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <ul class="footer-follow">
-                    <li><a href="https://limelightgaming.net"><i class="fas fa-store-alt"></i></a></li>
-                </ul>
-                <div class="footer-copyright">
-                    <p>Limelight Gaming 2020</p>
-                </div>
-            </div>
+<div class="footer container">
+    <div class="wrapper">
+      <div class="footer-top">
+        <div class="footer-column">
+          <a href="#" class="footer-logo">
+            <img src="assets/img/limelight-logo-l2.svg" alt="Limelight Gaming"/>
+          </a>
+          <p>© 2021 Limelight Gaming Ltd.</p>
+          <p>All rights reserved.</p>
         </div>
+    {% for item in site.data.footer.footersections %}
+        <div class="footer-column footer-menu">
+        <div class="column-title">{{ item.section }}</div>
+            {% for entry in item.links %}
+            <a href="{{ entry.href }}"><i class="fa-solid {{ entry.icon }}"></i>{{ entry.title }}</a>
+            {% endfor %}
+        </div>
+    {% endfor %}
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-bottom-text">
+          <p>Stroke-On-Trent, United Kingdom</p>
+          <p>Company Number (England &amp; Wales): 10152228</p>
+        </div>
+        <div class="footer-social">
+          <a href="#"><i class="fa-brands fa-discord"></i></a>
+          <a href="#"><i class="fab fa-github"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
     </div>
-</footer>
+</div>
+
+<script src="assets/js/main.js"></script>

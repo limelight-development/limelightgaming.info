@@ -1,0 +1,55 @@
+---
+links:
+    - href: /assets/css/reset.css
+    - href: /assets/css/main.css
+    - href: "https://fonts.googleapis.com"
+    - href: "https://fonts.gstatic.com"
+    - href "https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+
+scripts:
+  - src: "https://kit.fontawesome.com/d9a45f972d.js"
+  - src: "https://code.jquery.com/jquery-3.4.1.min.js"
+    crossorigin: "anonymous"
+---
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Site, Layout and Page Links / Scripts -->
+		{% for link in site.data.links %}
+			{%- include components/link.html.liquid link=link %}
+		{% endfor %}
+		{% for link in layout.links %}
+			{%- include components/link.html.liquid link=link %}
+		{% endfor %}
+		{% for link in page.links %}
+			{%- include components/link.html.liquid link=link %}
+		{% endfor %}
+		{% for link in site.data.scripts %}
+			{%- include components/script.html.liquid link=link %}
+		{% endfor %}
+		{% for link in layout.scripts %}
+			{%- include components/script.html.liquid link=link %}
+		{% endfor %}
+		{% for link in page.scripts -%}
+			{%- include components/script.html.liquid link=link %}
+		{% endfor %}
+
+        {% seo %}
+	</head>
+    <body>
+        {% include nav.html.liquid %}
+
+        {{ content }}
+
+        {% include footer.html.liquid %}
+        {% if page.media %}{% include mediabox.html %}{% endif %}
+
+    </body>
+
+    {% if page.media %}<script src="{{ '/assets/js/lightbox.js' | relative_url }}"></script>{% endif %}
+    {% for script in page.endscripts %}<script src="{{ script | relative_url }}"></script>{% endfor %}
+</html>
