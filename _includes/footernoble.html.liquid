@@ -8,28 +8,15 @@
           <p>© 2021 Limelight Gaming Ltd.</p>
           <p>All rights reserved.</p>
         </div>
-        <div class="footer-column footer-menu">
-          <div class="column-title">Main</div>
-          <a href="#"><i class="fa-solid fa-circle-info"></i> About</a>
-          <a href="#"><i class="fa-solid fa-gamepad-modern"></i> Servers</a>
-          <a href="#"><i class="fa-solid fa-code-branch"></i> Projects</a>
-          <a href="#"><i class="fa-solid fa-user-astronaut"></i> Team</a>
-        </div>
-        <div class="footer-column footer-menu">
-          <div class="column-title">Forums</div>
-          <a href="#"><i class="fa-solid fa-messages"></i> Meta</a>
-          <a href="#"><i class="fa-solid fa-jet-fighter"></i> Ares Defense Force</a>
-          <a href="#"><i class="fa-solid fa-city"></i> CityRP</a>
-          <a href="#"><i class="fa-solid fa-icons"></i> General</a>
-          <a href="#"><i class="fa-solid fa-box-archive"></i> Archive</a>
-        </div>
-        <div class="footer-column footer-menu">
-          <div class="column-title">Resources</div>
-          <a href="#"><i class="fa-solid fa-circle-question"></i> Help & Support</a>
-          <a href="#"><i class="fa-solid fa-comments-question-check"></i> FAQ</a>
-          <a href="#"><i class="fa-solid fa-book-bookmark"></i> Terms of Service</a>
-          <a href="#"><i class="fa-solid fa-user-secret"></i> Privacy</a>
-        </div>
+  {% for item in site.data.footer.toc %}
+    <div class="footer-column footer-menu">
+    <div class="column-title">{{ item.section }}</div>
+      <div>
+        {% for entry in item.links %}
+          <li><a href="{{ entry.href }}">{{ entry.icon }}{{ entry.title }}</a></li>
+        {% endfor %}
+      </div>
+  {% endfor %}
       </div>
       <div class="footer-bottom">
         <div class="footer-bottom-text">
