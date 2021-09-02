@@ -2,45 +2,45 @@ toc:
   section: main
   links:
     - title: About
-      icon: <i class="fa-solid fa-circle-info"></i>
+      icon: fa-circle-info
       href: /#about
     - title: Servers
-      icon: <i class="fa-solid fa-gamepad-modern"></i>
+      icon: fa-gamepad-modern
       href: /#servers
     - title: Projects
-      icon: <i class="fa-solid fa-code-branch"></i>
+      icon: fa-code-branch
       href: /#projects
     - title: Team
-      icon: <i class="fa-solid fa-user-astronaut"></i> 
+      icon: fa-user-astronaut 
       href: /#team
   section: forums
   links:
     - title: Meta
-      icon: <i class="fa-solid fa-messages"></i>
+      icon: fa-messages</i>
       href: /#meta
     - title: Ares Defence Services
-      icon: <i class="fa-solid fa-jet-fighter"></i>
+      icon: fa-jet-fighter
       href: /#ads
     - title: CityRP
-      icon: <i class="fa-solid fa-city"></i>
+      icon: fa-city
       href: /#cityrp
     - title: General
-      icon: <i class="fa-solid fa-icons"></i>
+      icon: fa-icons
       href: /#general
     - title: Archive
-      icon: <i class="fa-solid fa-box-archive"></i>
+      icon: fa-box-archive
       href: /#archive
   section: resources
   links:
     - title: Help & Support
-      icon: <i class="fa-solid fa-circle-question"></i>
+      icon: fa-circle-question
       href: /#helpandsupport
     - title: FAQ
-      icon: <i class="fa-solid fa-comments-question-check"></i>
+      icon: fa-comments-question-check
       href: /#faq
     - title: Terms of Service
-      icon: <i class="fa-solid fa-book-bookmark"></i>
+      icon: fa-book-bookmark
       href: /#tos
     - title: Privacy
-      icon: <i class="fa-solid fa-user-secret"></i>
+      icon: fa-user-secret
       href: /#privacy
