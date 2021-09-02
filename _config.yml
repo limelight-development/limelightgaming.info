@@ -2,6 +2,7 @@ collections:
   - homework
   - team
   - servers
+  - projects
 
 defaults:
   -
@@ -19,6 +20,11 @@ defaults:
       path: "_servers"
     values:
       layout: "servers_item"
+  -
+    scope:
+      path: "_projects"
+    values:
+      layout: "projects_item"
 
 title: Limelight Gaming
 

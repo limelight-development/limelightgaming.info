@@ -81,24 +81,9 @@ layout: landingpage
     <div class="wrapper">
       <h2>We’ve worked on a wide variety of projects</h2>
       <div class="project-columns">
-        <div class="project-single">
-          <div class="project-tag">Garry's Mod</div>
-          <h3>L² Plates</h3>
-          <p>L² plates is a custom designed system for putting license plates on vehicles. The code is written in Lua, with the complete system sold online at GModStore.</p>
-          <a href="#" class="btn btn-quart" target="_blank"><i class="fa-solid fa-cart-arrow-down"></i> Purchase</a>
-        </div>
-        <div class="project-single">
-          <div class="project-tag">PHP</div>
-          <h3>BBCode Markdown Converter</h3>
-          <p>The BBCode Markdown converter was written with the aim of providing bi-directional conversion between Markdown and BBCode. Whilst there are many converters that go from BBCode to Markdown, we found none that go the other way. So, we wrote our own.</p>
-          <a href="#" class="btn btn-quart" target="_blank"><i class="fa-solid fa-arrow-right-from-line"></i> View on GitHub</a>
-        </div>
-        <div class="project-single">
-          <div class="project-tag">PHP-CLI</div>
-          <h3>DB Processor</h3>
-          <p>The DB Processor is a procedural PHP-CLI script used to process INSERT statements based on key-value maps into a database. It is available as a standalone script, docker, and GitHub-Action.</p>
-          <a href="#" class="btn btn-quart" target="_blank"><i class="fa-solid fa-arrow-right-from-line"></i> View on GitHub</a>
-        </div>
+        {% for item in site.projects %}
+        {{ item }}
+        {% endfor %}    
       </div>
     </div>
   </div>
