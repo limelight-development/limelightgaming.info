@@ -1,45 +1,46 @@
-section: main
-links:
-  - title: About
-    icon: <i class="fa-solid fa-circle-info"></i>
-    href: /#about
-  - title: Servers
-    icon: <i class="fa-solid fa-gamepad-modern"></i>
-    href: /#servers
-  - title: Projects
-    icon: <i class="fa-solid fa-code-branch"></i>
-    href: /#projects
-  - title: Team
-    icon: <i class="fa-solid fa-user-astronaut"></i> 
-    href: /#team
-section: forums
-links:
-  - title: Meta
-    icon: <i class="fa-solid fa-messages"></i>
-    href: /#meta
-  - title: Ares Defence Services
-    icon: <i class="fa-solid fa-jet-fighter"></i>
-    href: /#ads
-  - title: CityRP
-    icon: <i class="fa-solid fa-city"></i>
-    href: /#cityrp
-  - title: General
-    icon: <i class="fa-solid fa-icons"></i>
-    href: /#general
-  - title: Archive
-    icon: <i class="fa-solid fa-box-archive"></i>
-    href: /#archive
-section: resources
-links:
-  - title: Help & Support
-    icon: <i class="fa-solid fa-circle-question"></i>
-    href: /#helpandsupport
-  - title: FAQ
-    icon: <i class="fa-solid fa-comments-question-check"></i>
-    href: /#faq
-  - title: Terms of Service
-    icon: <i class="fa-solid fa-book-bookmark"></i>
-    href: /#tos
-  - title: Privacy
-    icon: <i class="fa-solid fa-user-secret"></i>
-    href: /#privacy
+toc:
+  section: main
+  links:
+    - title: About
+      icon: <i class="fa-solid fa-circle-info"></i>
+      href: /#about
+    - title: Servers
+      icon: <i class="fa-solid fa-gamepad-modern"></i>
+      href: /#servers
+    - title: Projects
+      icon: <i class="fa-solid fa-code-branch"></i>
+      href: /#projects
+    - title: Team
+      icon: <i class="fa-solid fa-user-astronaut"></i> 
+      href: /#team
+  section: forums
+  links:
+    - title: Meta
+      icon: <i class="fa-solid fa-messages"></i>
+      href: /#meta
+    - title: Ares Defence Services
+      icon: <i class="fa-solid fa-jet-fighter"></i>
+      href: /#ads
+    - title: CityRP
+      icon: <i class="fa-solid fa-city"></i>
+      href: /#cityrp
+    - title: General
+      icon: <i class="fa-solid fa-icons"></i>
+      href: /#general
+    - title: Archive
+      icon: <i class="fa-solid fa-box-archive"></i>
+      href: /#archive
+  section: resources
+  links:
+    - title: Help & Support
+      icon: <i class="fa-solid fa-circle-question"></i>
+      href: /#helpandsupport
+    - title: FAQ
+      icon: <i class="fa-solid fa-comments-question-check"></i>
+      href: /#faq
+    - title: Terms of Service
+      icon: <i class="fa-solid fa-book-bookmark"></i>
+      href: /#tos
+    - title: Privacy
+      icon: <i class="fa-solid fa-user-secret"></i>
+      href: /#privacy
