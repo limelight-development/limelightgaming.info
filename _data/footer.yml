@@ -15,7 +15,7 @@
   section: forums
   links:
     - title: Meta
-      icon: fa-messages</i>
+      icon: fa-messages
       href: /#meta
     - title: Ares Defence Services
       icon: fa-jet-fighter
