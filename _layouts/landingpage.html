@@ -46,8 +46,6 @@ scripts:
         {{ content }}
 
         {% include footer.html.liquid %}
-        {% if page.media %}{% include mediabox.html %}{% endif %}
-
     </body>
 
     {% if page.media %}<script src="{{ '/assets/js/lightbox.js' | relative_url }}"></script>{% endif %}
