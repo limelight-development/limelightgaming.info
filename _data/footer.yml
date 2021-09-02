@@ -1,45 +1,46 @@
-- section: Main
-  links:
-    - title: About
-      icon: fa-circle-info
-      href: /#about
-    - title: Servers
-      icon: fa-gamepad-modern
-      href: /#servers
-    - title: Projects
-      icon: fa-code-branch
-      href: /#projects
-    - title: Team
-      icon: fa-user-astronaut 
-      href: /#team
-- section: Forums
-  links:
-    - title: Meta
-      icon: fa-messages
-      href: /#meta
-    - title: Ares Defence Services
-      icon: fa-jet-fighter
-      href: /#ads
-    - title: CityRP
-      icon: fa-city
-      href: /#cityrp
-    - title: General
-      icon: fa-icons
-      href: /#general
-    - title: Archive
-      icon: fa-box-archive
-      href: /#archive
-- section: Resources
-  links:
-    - title: Help &amp; Support
-      icon: fa-circle-question
-      href: /#helpandsupport
-    - title: FAQ
-      icon: fa-comments-question-check
-      href: /#faq
-    - title: Terms of Service
-      icon: fa-book-bookmark
-      href: /#tos
-    - title: Privacy
-      icon: fa-user-secret
-      href: /#privacy
+footersections:
+  - section: Main
+    links:
+      - title: About
+        icon: fa-circle-info
+        href: /#about
+      - title: Servers
+        icon: fa-gamepad-modern
+        href: /#servers
+      - title: Projects
+        icon: fa-code-branch
+        href: /#projects
+      - title: Team
+        icon: fa-user-astronaut 
+        href: /#team
+  - section: Forums
+    links:
+      - title: Meta
+        icon: fa-messages
+        href: /#meta
+      - title: Ares Defence Services
+        icon: fa-jet-fighter
+        href: /#ads
+      - title: CityRP
+        icon: fa-city
+        href: /#cityrp
+      - title: General
+        icon: fa-icons
+        href: /#general
+      - title: Archive
+        icon: fa-box-archive
+        href: /#archive
+  - section: Resources
+    links:
+      - title: Help &amp; Support
+        icon: fa-circle-question
+        href: /#helpandsupport
+      - title: FAQ
+        icon: fa-comments-question-check
+        href: /#faq
+      - title: Terms of Service
+        icon: fa-book-bookmark
+        href: /#tos
+      - title: Privacy
+        icon: fa-user-secret
+        href: /#privacy

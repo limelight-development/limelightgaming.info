@@ -1,4 +1,4 @@
-    <div class="footer container">
+<div class="footer container">
     <div class="wrapper">
       <div class="footer-top">
         <div class="footer-column">
@@ -8,13 +8,13 @@
           <p>© 2021 Limelight Gaming Ltd.</p>
           <p>All rights reserved.</p>
         </div>
-  {% for item in site.data.footer %}
-    <div class="footer-column footer-menu">
-    <div class="column-title">{{ item.section }}</div>
-        {% for entry in item.links %}
-          <a href="{{ entry.href }}"><i class="fa-solid {{ entry.icon }}"></i>{{ entry.title }}</a>
-        {% endfor %}
-  {% endfor %}
+    {% for item in site.data.footer.footersections %}
+        <div class="footer-column footer-menu">
+        <div class="column-title">{{ item.section }}</div>
+            {% for entry in item.links %}
+            <a href="{{ entry.href }}"><i class="fa-solid {{ entry.icon }}"></i>{{ entry.title }}</a>
+            {% endfor %}
+    {% endfor %}
       </div>
       <div class="footer-bottom">
         <div class="footer-bottom-text">
@@ -29,6 +29,6 @@
         </div>
       </div>
     </div>
-  </div>
+</div>
 
     <script src="assets/js/main.js"></script>
