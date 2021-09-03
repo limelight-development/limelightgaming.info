@@ -491,7 +491,8 @@ a.btn-quart:hover {
   padding-top: 0;
 }
 
-.nav.mobile-open:after {
+.nav.container.mobile-open:after {
+  height: 60px;
   background: var(--dark-900);
 }
 
@@ -528,8 +529,8 @@ a.btn-quart:hover {
 
 @media only screen and (max-width: 500px) {
   .hero .wrapper {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
   }
 
   .hero h1 {
@@ -1166,5 +1167,11 @@ a.btn-team:hover {
     text-align: center;
     flex-direction: column-reverse;
     grid-row-gap: 30px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .footer.container {
+    margin-top: 4rem;
   }
 }
