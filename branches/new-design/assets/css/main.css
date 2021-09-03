@@ -200,7 +200,6 @@ a.btn-quart:hover {
     opacity: 1;
   }
   to {
-    //transform: scaleX(1.16) scaleY(1.5);
     transform: scaleX(1.24) scaleY(1.7);
     border-radius: 3px;
     opacity: 0;
@@ -230,12 +229,10 @@ a.btn-quart:hover {
 
 @keyframes bg-zoom {
   from {
-    //background-size: 100%;
     transform: scale(1);
     opacity: 0;
   }
   to {
-    //background-size: 110%;
     transform: scale(1.1);
     opacity: 1;
   }
@@ -526,6 +523,23 @@ a.btn-quart:hover {
 @media only screen and (max-width: 860px) {
   .hero .wrapper {
     padding-top: 10rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .hero .wrapper {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .hero h1 {
+    font-size: 48px;
+  }
+
+  .hero .hero-btns {
+    max-width: fit-content;
+    flex-direction: column;
+    grid-row-gap: 20px;
   }
 }
 
