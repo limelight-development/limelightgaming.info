@@ -538,7 +538,7 @@ a.btn-quart:hover {
   }
 
   .hero h1 {
-    font-size: 48px;
+    font-size: 46px;
   }
 
   .hero .hero-btns {
@@ -1019,6 +1019,12 @@ a.btn-team:hover {
 @media only screen and (max-width: 640px) {
   .team .team-grid {
     grid-template-columns: repeat(1, auto);
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .team .team-grid {
+    grid-row-gap: 60px;
   }
 }
 
