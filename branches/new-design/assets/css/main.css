@@ -507,8 +507,12 @@ a.btn-quart:hover {
 /* Hero */
 
 .hero .wrapper {
-  padding-top: 20rem;
-  padding-bottom: 10rem;
+  //padding-top: 20rem;
+  //padding-bottom: 10rem;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .hero h1 {
@@ -523,14 +527,14 @@ a.btn-quart:hover {
 
 @media only screen and (max-width: 860px) {
   .hero .wrapper {
-    padding-top: 10rem;
+    //padding-top: 10rem;
   }
 }
 
 @media only screen and (max-width: 500px) {
   .hero .wrapper {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+    //padding-top: 4rem;
+    //padding-bottom: 4rem;
   }
 
   .hero h1 {
