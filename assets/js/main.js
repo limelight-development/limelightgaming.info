@@ -67,3 +67,17 @@ $(function () {
     addClassOnScroll();
   });
 });
+
+//
+// Years that LL has been in operation
+//
+$(document).ready(function() {
+  $('#years-est').html((index, html) => {
+    var date = moment([2015, 8, 6]);
+    var now = moment();
+
+    days = now.diff(date, 'days');
+    years = (days / 365).toFixed(1);
+    return years;
+  });
+});
