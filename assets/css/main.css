@@ -298,6 +298,7 @@ a.btn-quart:hover {
 .nav .wrapper {
   position: sticky;
   height: 60px;
+  margin-top: auto;
   padding-top: 28px;
   font-family: var(--heading-font-family);
   display: flex;
