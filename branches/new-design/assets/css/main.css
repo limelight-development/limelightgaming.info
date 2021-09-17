@@ -1036,6 +1036,7 @@ a.btn-team:hover {
 .footer.container {
   margin-top: 6rem;
   background: var(--dark-800);
+  border-top: 1px solid var(--dark-700);
 }
 
 .footer .wrapper {
@@ -1131,7 +1132,7 @@ a.btn-team:hover {
 }
 
 .footer-bottom .footer-social a {
-  color: var(--dark-400);
+  color: var(--dark-500);
   transition: .15s;
 }
 
