@@ -820,11 +820,13 @@ a.btn-quart:hover {
 }
 
 .server-single .server-info {
-  margin-top: 20px;
+  margin-top: 30px;
   color: var(--dark-500);
   font-size: 13px;
   display: flex;
-  grid-column-gap: 14px;
+  flex-wrap: wrap;
+  grid-column-gap: 16px;
+  grid-row-gap: 14px;
 }
 
 .server-single .server-info i {
