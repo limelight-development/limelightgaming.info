@@ -20,10 +20,14 @@ $(window).scroll(function() {
 //
 $('.btn-mobile').click(function() {
   $('.mobile.container').toggle();
+  $('.btn-mobile i').toggleClass('fa-bars');
+  $('.btn-mobile i').toggleClass('fa-xmark');
   $('.nav.container').toggleClass('mobile-open');
 })
 $('.mobile-links a').click(function() {
   $('.mobile.container').toggle();
+  $('.btn-mobile i').toggleClass('fa-bars');
+  $('.btn-mobile i').toggleClass('fa-xmark');
   $('.nav.container').toggleClass('mobile-open');
 })
 
@@ -69,7 +73,7 @@ $(function () {
 });
 
 //
-// Years that LL has been in operation
+// Years that LL has been in operation, probably can be moved to backend?
 //
 $(document).ready(function() {
   $('#years-est').html((index, html) => {
