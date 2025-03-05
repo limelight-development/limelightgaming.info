@@ -31,7 +31,7 @@ jobs:
       - name: Build Site
         run: bundle exec jekyll build --baseurl "${{ steps.branch_root.outputs.deploy_baseurl }}"
       - name: Deploy Site
-        uses: JamesIves/github-pages-deploy-action@4.1.4
+        uses: JamesIves/github-pages-deploy-action@v4.7.3
         with:
           branch: gh-pages
           folder: _site
