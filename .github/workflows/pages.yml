@@ -11,9 +11,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       - name: Fetch Gem Dependency Cache
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         id: gem-cache
         with:
           path: vendor/cache

@@ -1,0 +1,38 @@
+on:
+  delete
+
+name: Deleted Branch Staging Cleanup
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    name: Cleanup
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Get Deployment Root
+        id: branch_root
+        run: .github/scripts/del-branch-root.sh
+        env:
+          deleted_ref: ${{ github.event.ref }}
+      - name: Switch to Pages Branch
+        uses: actions/checkout@v2
+        with:
+          ref: gh-pages
+      - name: Remove Files
+        if: ${{ steps.branch_root.outputs.deploy_exclude == '' }}
+        run: |
+          find ${{ steps.branch_root.outputs.deploy_root }} -type f -depth -exec rm "{}" +
+          find ${{ steps.branch_root.outputs.deploy_root }} -type d -depth -exec rmdir "{}" +
+      - name: Remove Unfiltered Files
+        if: ${{ steps.branch_root.outputs.deploy_exclude != '' }}
+        run: |
+          find ${{ steps.branch_root.outputs.deploy_root }} ! -name '${{ steps.branch_root.outputs.deploy_exclude }}' -type f -depth -exec rm "{}" +
+          find ${{ steps.branch_root.outputs.deploy_root }} ! -name '${{ steps.branch_root.outputs.deploy_exclude }}' -type d -depth -exec rmdir "{}" +
+      - name: Deploy Cleanup
+        run: |
+          git config user.name "Limelight Cleanup Service"
+          git config user.email "automation@limelightgaming.net"
+          git add --all "${{ steps.branch_root.outputs.deploy_root }}"
+          git commit -m "Cleaned up deleted branch: ${{ github.event.ref }} 🗑️" --no-verify
+          git push --force
