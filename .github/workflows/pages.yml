@@ -12,14 +12,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Fetch Gem Dependency Cache
-        uses: actions/cache@v4
-        id: gem-cache
-        with:
-          path: vendor/cache
-          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-gems-
+#      - name: Fetch Gem Dependency Cache
+#        uses: actions/cache@v4
+#        id: gem-cache
+#        with:
+#          path: vendor/cache
+#          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+#          restore-keys: |
+#            ${{ runner.os }}-gems-
       - name: Install Dependencies
         run: (cat Gemfile.lock > /dev/null && (sudo gem install bundler -v "$(grep -A 1 "BUNDLED WITH" Gemfile.lock | tail -n 1)") || sudo gem install bundler) && bundler config set deployment 'true' && bundler install
       - name: Build Cache
