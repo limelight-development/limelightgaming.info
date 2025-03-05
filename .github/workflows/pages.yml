@@ -21,7 +21,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-gems-
       - name: Install Dependencies
-        run: sudo gem install bundler && bundler install
+        run: (cat Gemfile.lock > /dev/null && (sudo gem install bundler -v "$(grep -A 1 "BUNDLED WITH" Gemfile.lock | tail -n 1)") || sudo gem install bundler) && bundler config set deployment 'true' && bundler install
       - name: Build Cache
         run: bundler cache
         if: steps.gem-cache.outputs.cache-hit != 'true'
