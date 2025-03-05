@@ -21,7 +21,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-gems-
       - name: Install Dependencies
-        run: sudo gem install bundler && bundler config set deployment 'true' && bundler update
+        run: sudo gem install bundler && bundler install
       - name: Build Cache
         run: bundler cache
         if: steps.gem-cache.outputs.cache-hit != 'true'
